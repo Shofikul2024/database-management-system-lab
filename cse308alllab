@@ -1,0 +1,84 @@
+-- first lab 
+
+CREATE TABLE mytable (
+    roll INT,
+    name VARCHAR(30)
+);
+
+INSERT INTO mytable (roll, name) VALUES (17, 'Md. Shofikul');
+INSERT INTO mytable (roll, name) VALUES (30, 'Nazmus sakib');
+
+SELECT * FROM mytable;
+
+
+
+-- 2 nd lab 
+
+
+
+CREATE TABLE mytable (
+    roll INT,
+  student_name VARCHAR(30)
+);
+
+INSERT INTO mytable (roll, student_name) VALUES (17, 'Shofikul');
+INSERT INTO mytable (roll, student_name) VALUES (30, 'sakib');
+ 
+ 
+
+SELECT * FROM mytable;
+
+
+
+
+-- 2 nd lab 
+
+ -- Correct the table creation
+CREATE TABLE students (
+    roll INT,
+    Student_Name VARCHAR(30)
+);
+
+-- Correct the insert statements
+INSERT INTO students (roll, Student_Name) VALUES 
+(17, 'shofikul'),
+(45, 'abcd'),
+(56, 'defg'),
+(67, 'qwerty');
+
+-- Correct the update statement
+UPDATE students
+SET Student_Name = 'bangladesh'
+WHERE roll = 67;
+
+-- Alter table to add 'present' column
+ALTER TABLE students ADD present VARCHAR(5);
+
+-- Correct the select statement
+SELECT * FROM students;
+
+-- Drop the 'present' column
+ALTER TABLE students DROP COLUMN present;
+
+-- Add 'present' column again
+ALTER TABLE students ADD present VARCHAR(5);
+
+-- Select from the table again
+SELECT * FROM students;
+
+-- Drop the 'present' column again
+ALTER TABLE students DROP COLUMN present;
+
+-- Rename column 'Student_Name' to 'name'
+ALTER TABLE students RENAME COLUMN Student_Name TO name;
+
+-- Correct select with the WHERE clause
+SELECT * FROM students WHERE roll = 56;
+
+-- Correct the update with SET clause for 'present'
+UPDATE students
+SET present = 'yes'
+WHERE roll = 56;
+
+-- Final select statement
+SELECT * FROM students;
